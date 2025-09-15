@@ -10,7 +10,7 @@ A simple Django Todo application featuring user authentication, CRUD operations,
 - Logout
 
 ## Workflow Diagram
-```mermaid
+
 flowchart LR
     A[Signup / Login] --> B[User Authenticated]
     B --> C[View All Tasks]
