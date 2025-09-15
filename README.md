@@ -1,22 +1,18 @@
 # Django Todo Project with Auth
 
-## Overview
-This is a **Todo web application** built with Django that includes user authentication (signup, login, logout) and CRUD functionality for tasks. Each user can manage their own tasks securely.
+A simple **Django Todo application** featuring user authentication, CRUD operations, and task search. Each user can manage their own tasks securely.
 
-![Todo App Screenshot](images/todo_home.png)
+---
 
 ## Features
-- ✅ User signup, login, logout
-- ✅ Create, read, update, delete (CRUD) tasks
-- ✅ Search tasks by title or status
-- ✅ Tasks linked to logged-in users
-- ✅ Simple and clean UI (HTML templates)
 
-## Tech Stack
-- Python 3.x
-- Django 5.x
-- SQLite (default) / PostgreSQL (optional)
-- HTML, CSS
+- User Signup & Login (Auth)
+- CRUD operations for tasks
+- Task search functionality
+- User-specific task view
+- Logout
+
+---
 
 ## Workflow Diagram
 
@@ -30,47 +26,61 @@ flowchart LR
     C --> G[Search Task]
     B --> H[Logout]
 Setup Instructions
-Clone the repository
+Clone the repository:
 
 bash
 Copy code
 git clone https://github.com/saadmeer123/django-todo-auth.git
 cd django-todo-auth
-Create a virtual environment
+Create and activate a virtual environment:
 
 bash
 Copy code
 python -m venv venv
-venv\Scripts\activate      # Windows
-source venv/bin/activate   # Linux / Mac
-Install dependencies
+# Windows
+venv\Scripts\activate
+# macOS / Linux
+source venv/bin/activate
+Install dependencies:
 
 bash
 Copy code
 pip install -r requirements.txt
-Apply migrations
+Apply migrations:
 
 bash
 Copy code
-python manage.py makemigrations
 python manage.py migrate
-Create superuser (for admin)
-
-bash
-Copy code
-python manage.py createsuperuser
-Run the development server
+Run the development server:
 
 bash
 Copy code
 python manage.py runserver
-Open http://127.0.0.1:8000/ in your browser.
+Open the browser at http://127.0.0.1:8000/.
 
 Usage
-Signup to create an account.
+Signup as a new user or login.
 
-Login to view and manage your tasks.
+Create, update, delete, or search tasks.
 
-Search tasks using the search bar.
+Logout when done.
 
+Notes
+Each user sees only their own tasks.
+
+The project uses SQLite by default but can be switched to PostgreSQL.
+
+Designed for learning Django Auth & CRUD patterns.
+
+License
+This project is open-source and free to use.
+
+pgsql
+Copy code
+
+This format will render **Mermaid diagrams correctly** on GitHub, and the instructions are clear for anyone to follow.  
+
+If you want, I can also add **screenshots + badges** for a more “professional” GitHub README look.  
+
+Do you want me to do that next?
 Edit or delete your tasks as needed.
