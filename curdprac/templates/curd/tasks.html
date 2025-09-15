@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your All Tasks</title>
+</head>
+<body>
+    <h2>------------ All Tasks -----------</h2>
+    <div>
+        <a href="{% url 'createtask' %}">+ Create Task</a> |
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+
+    <!-- Search form -->
+    <form method="get" action="{% url 'searchtask' %}">
+        <input type="text" name="q" placeholder="Search tasks..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.title }}
+                — Status: {{ task.status }}
+                — Deadline: {{ task.deadline }}
+
+                <!-- Links with pk -->
+                - <a href="{% url 'detailtask' task.pk %}">Detail</a>
+                - <a href="{% url 'updatetask' task.pk %}">Edit</a>
+                - <a href="{% url 'deletetask' task.pk %}">Remove</a>
+            </li>
+        {% empty %}
+            <li>No tasks available</li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
+    

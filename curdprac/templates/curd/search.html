@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <h2>Search Tasks</h2>
+
+    <form method="get" action="{% url 'searchtask' %}">
+        <input type="text" name="q" placeholder="Search by title or status..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul>
+        {% for task in form %}
+            <li>
+                <a href="{% url 'detailtask' task.pk %}">{{ task.title }}</a>
+                — Status: {{ task.status }} — Deadline: {{ task.deadline }}
+            </li>
+        {% empty %}
+            <li>No tasks found matching '{{ query }}'</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'alltask' %}">Back to all tasks</a>
+
+</body>
+</html>
