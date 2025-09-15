@@ -75,7 +75,10 @@ def detail_task(request, pk):
 def search_task(request):
     query = request.GET.get('q','')
     if query:
-        tasks = Todo.objects.filter( Q(title__icontains=query) | Q(status__icontains=query))
+        tasks = Todo.objects.filter( 
+            Q(title__icontains=query) | Q(status__icontains=query),
+            user=request.user
+            ),
     else:
         tasks = Todo.objects.all()
     return render(request, 'curd/tasks.html', { 'tasks':tasks,'query':query })
