@@ -16,7 +16,6 @@ A simple **Django Todo application** featuring user authentication, CRUD operati
 
 ## Workflow Diagram
 
-```mermaid
 flowchart LR
     A[Signup / Login] --> B[User Authenticated]
     B --> C[View All Tasks]
@@ -25,6 +24,7 @@ flowchart LR
     C --> F[Delete Task]
     C --> G[Search Task]
     B --> H[Logout]
+
 Setup Instructions
 Clone the repository:
 
