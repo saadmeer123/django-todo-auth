@@ -19,6 +19,7 @@ flowchart LR
     C --> F[Delete Task]
     C --> G[Search Task]
     B --> H[Logout]
+
 Setup Instructions
 Clone the repository:
 
