@@ -1,21 +1,16 @@
 # Django Todo Project with Auth
 
-A simple **Django Todo application** featuring user authentication, CRUD operations, and task search. Each user can manage their own tasks securely.
-
----
+A simple Django Todo application featuring user authentication, CRUD operations, and task search. Each user can manage their own tasks securely.
 
 ## Features
-
 - User Signup & Login (Auth)
 - CRUD operations for tasks
 - Task search functionality
 - User-specific task view
 - Logout
 
----
-
 ## Workflow Diagram
-
+```mermaid
 flowchart LR
     A[Signup / Login] --> B[User Authenticated]
     B --> C[View All Tasks]
@@ -24,7 +19,6 @@ flowchart LR
     C --> F[Delete Task]
     C --> G[Search Task]
     B --> H[Logout]
-
 Setup Instructions
 Clone the repository:
 
@@ -56,7 +50,7 @@ Run the development server:
 bash
 Copy code
 python manage.py runserver
-Open the browser at http://127.0.0.1:8000/.
+Open your browser at http://127.0.0.1:8000/
 
 Usage
 Signup as a new user or login.
@@ -75,12 +69,20 @@ Designed for learning Django Auth & CRUD patterns.
 License
 This project is open-source and free to use.
 
-pgsql
+vbnet
 Copy code
 
-This format will render **Mermaid diagrams correctly** on GitHub, and the instructions are clear for anyone to follow.  
+✅ Key fixes:
 
-If you want, I can also add **screenshots + badges** for a more “professional” GitHub README look.  
+1. Triple backticks around `mermaid` diagram.
+2. Each node and arrow on its **own line**.
+3. Blank line **before and after** the code block.
+4. Clean Markdown headings and code blocks for commands.
 
-Do you want me to do that next?
-Edit or delete your tasks as needed.
+If you want, I can also make a **version with badges (like Python version, license, GitHub stars) and screenshots** to make it look professional. Do you want me to do that next?
+
+
+
+
+
+
